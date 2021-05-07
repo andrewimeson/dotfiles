@@ -1,3 +1,5 @@
+source ~/.profile # get cross-shell configuration
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,10 +7,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 # /usr/local/sbin needed for arping and mtr
-export PATH=/Users/andrewimeson/Library/Python/3.7/bin:/usr/local/sbin:$PATH:$HOME/.composer/vendor/bin
+# IMPROVE: Wow, you really could do a cleaner job setting $PATH
+# One thing you might want to do is also switch to having it set in `.profile`
+# instead.
+export PATH="$HOME/Library/Python/3.7/bin:/usr/local/sbin:$PATH:$HOME/.composer/vendor/bin"
 
 # And again, let's get Python 3.7 since Ansible 2.8 doesn't support 3.8
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
@@ -17,7 +20,7 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/andrewimeson/.oh-my-zsh
+export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -33,7 +36,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -62,6 +65,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM="$XDG_CONFIG_HOME/zsh_custom"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -121,6 +125,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# IMPROVE: Move to $ZSH_CUSTOM
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
