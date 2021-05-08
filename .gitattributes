@@ -1,0 +1,4 @@
+*secret* filter=git-crypt diff=git-crypt
+.gitconfig-work filter=git-crypt diff=git-crypt
+# Prevent git-crypt from encrypting itself
+.gitattributes !filter !diff
