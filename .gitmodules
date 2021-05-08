@@ -9,7 +9,7 @@
 	url = https://github.com/zsh-users/zsh-completions
 [submodule "dotfiles/zsh_custom/plugins/zsh-prioritize-cwd-history"]
 	path = dotfiles/zsh_custom/plugins/zsh-prioritize-cwd-history
-	url = https://github.com//ericfreese/zsh-prioritize-cwd-history.git
+	url = https://github.com/ericfreese/zsh-prioritize-cwd-history.git
 [submodule "dotfiles/zsh_custom/plugins/zsh-syntax-highlighting"]
 	path = dotfiles/zsh_custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
