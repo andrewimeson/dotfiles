@@ -1,0 +1,44 @@
+[core]
+    excludesfile = ~/.gitignore_global
+[user]
+    name       = Andrew Imeson
+    email      = andrew@andrewimeson.com
+    signingkey = 9FC9E016
+[gpg]
+    program = gpg
+[includeIf "gitdir:~/Documents/Code/work/"]
+    path = ~/.gitconfig-work
+[commit]
+    template = ~/.gitmessage
+    gpgsign  = true
+    verbose  = true
+[merge]
+    tool = vimdiff
+[alias]
+    graph = log --graph --oneline --decorate
+    root  = !pwd
+    rbi   = rebase --interactive
+    pf    = push --force-with-lease
+    st    = status
+# IMPROVE: Fix repocache to work again
+#[repocache]
+#    path = ~/Library/Caches/org.git.repocache/repocache.git
+[github]
+    user = andrewimeson
+[ghi]
+    token = !security find-internet-password -a andrewimeson -s github.com -l 'ghi token' -w
+[push]
+    default = current
+[rebase]
+    autosquash = true
+[url "git@github.com:"]
+    insteadOf = gh:
+[log]
+    abbrevcommit = yes
+[apply]
+    whitespace = fix
+[help]
+    # Automatically apply typo fix of git command in X deciseconds (0.1 sec)
+    autocorrect = 30
+[init]
+    defaultBranch = master
