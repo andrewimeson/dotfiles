@@ -1,0 +1,2 @@
+# Suggest 'command -v' instead of 'which'
+enable=deprecate-which
