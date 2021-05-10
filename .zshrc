@@ -72,21 +72,21 @@ ZSH_CUSTOM="$XDG_CONFIG_HOME/zsh_custom"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  colored-man-pages
-  zsh-autosuggestions
-  sudo
-  brew
-  npm
-  golang
-  pip
-  vagrant
-  terraform
-  zsh-syntax-highlighting
-  zsh-completions
-  extract
-  zsh-prioritize-cwd-history
   aws
+  brew
+  colored-man-pages
+  extract
+  git
+  golang
+  npm
+  pip
+  sudo
+  terraform
+  vagrant
+  zsh-autosuggestions
+  zsh-completions
+  zsh-prioritize-cwd-history
+  zsh-syntax-highlighting
 #  ssh-agent
 )
 
