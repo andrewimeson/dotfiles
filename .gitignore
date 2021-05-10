@@ -1,0 +1,23 @@
+# gitignore for github.com/andrewimeson/dotfiles
+# If you, Andrew, are thinking about adding something to this file, ask yourself
+# if it's specific to dotfiles, or if it's something you'd want ignored on your
+# system for any repo (and that would _exist_ potentially in any repo). If so,
+# add it to the .gitignore_global file instead, which any system using this
+# dotfiles repo would automatically be layering on top anyway.
+
+# Name files like secrets.do-not-track.zsh to exclude
+*do-not-track*
+
+# Local additions to .profile
+.profile.local
+
+.cache
+.trash
+# MySQL, Bash, etc history
+.*_history
+.mycli.log
+
+.icee
+.Xauthority
+
+Downloads/
