@@ -73,12 +73,9 @@ ZSH_CUSTOM="$XDG_CONFIG_HOME/zsh_custom"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   aws
-  brew
   colored-man-pages
   extract
   git
-  golang
-  npm
   pip
   sudo
   terraform
@@ -87,7 +84,6 @@ plugins=(
   zsh-completions
   zsh-prioritize-cwd-history
   zsh-syntax-highlighting
-#  ssh-agent
 )
 
 # ssh-agent plugin config must be before oh-my-zsh is loaded
