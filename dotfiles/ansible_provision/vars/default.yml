@@ -1,0 +1,96 @@
+---
+
+brew_packages:
+
+  # Networking
+  - arping
+  - tcptraceroute
+  - iperf3
+  - nmap
+  - fping
+  - lldpd
+  - mtr
+  - curl
+  - telnet
+
+  # Shell
+  - bash
+  - zsh
+  - shellcheck
+  - shfmt
+  - lolcat
+  - coreutils
+  - gnu-sed
+  - gnu-tar
+  - gawk
+  - parallel
+  - tree
+  - watch
+  - jq
+  - dos2unix
+  - htop
+  - tmux
+
+  # Languages
+  - lua
+  - luajit
+  - luarocks
+  - node
+  - ipython
+  - r  # R statistical analysis
+  - gcc
+  - autoconf
+  - automake
+  - llvm
+  - php
+  - tidy-html5
+
+  # English
+  - aspell
+  - redpen
+  - write-good
+
+  # Source Control
+  - gh  # GitHub CLI
+  - act  # local GitHub Actions
+  - git
+  - git-crypt
+  - git-quick-stats
+  - git-secrets
+  - gitleaks
+  - pre-commit
+  - mercurial
+  - grip  # markdown preview tool
+
+  # Multimedia
+  - jpegoptim
+  - pngquant
+  - ffmpeg
+  - webp
+
+  # Databases
+  - mariadb
+  - sqlite
+  - litecli
+  - mycli
+  - pgcli
+  - redis
+
+  # Security
+  - pwgen
+  - gnupg  # gpg / pgp
+  - gpgme
+
+  # Editor, mail, etc
+  - vim
+  - mutt
+
+  # compression
+  - zopfli
+  - p7zip
+  - lzo
+  - brotli
+
+  # TODO: Best way to install my font?
+  # - font-hack-nerd-font
+  # - font-sourcecodepro-nerd-font

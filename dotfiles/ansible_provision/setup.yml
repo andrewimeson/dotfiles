@@ -1,0 +1,4 @@
+---
+# Setup a macOS machine
+- name: setup local system
+  hosts: localhost
