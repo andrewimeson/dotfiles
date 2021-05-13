@@ -8,16 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # /usr/local/sbin needed for arping and mtr
-# IMPROVE: Wow, you really could do a cleaner job setting $PATH
-# One thing you might want to do is also switch to having it set in `.profile`
-# instead.
-export PATH="$HOME/Library/Python/3.7/bin:/usr/local/sbin:$PATH:$HOME/.composer/vendor/bin"
-
-# And again, let's get Python 3.7 since Ansible 2.8 doesn't support 3.8
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-# Ruby!
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+export PATH="$PATH:/usr/local/sbin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
