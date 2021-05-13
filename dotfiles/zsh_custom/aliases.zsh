@@ -44,6 +44,16 @@ if [[ $OSTYPE =~ "darwin" ]]; then
     sudo launchctl stop com.apple.usbd
     sudo launchctl start com.apple.usbd
   }
+  # TODO: This isn't an alias
+  # Should this actually do architecture detection, since _under Rosetta_ there
+  # might be both installed? idk
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    # ARM64 Homebrew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [[ -x /usr/local/bin/brew ]]; then
+    # x86_64 Homebrew
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
 fi
 # cansible - c[at]ansible. An easy way to view all the files in an Ansible role
 # Created with @cstobey
