@@ -44,8 +44,6 @@ if [[ $OSTYPE =~ "darwin" ]]; then
     sudo launchctl stop com.apple.usbd
     sudo launchctl start com.apple.usbd
   }
-  # Workaround for Python crashing with Ansible after upgrading to macOS 10.15
-  export DYLD_LIBRARY_PATH=/usr/local/opt/openssl/lib:$DYLD_LIBRARY_PATH
 fi
 # cansible - c[at]ansible. An easy way to view all the files in an Ansible role
 # Created with @cstobey
