@@ -18,10 +18,10 @@ alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 #### Setup
 
 ```sh
-git init --bare $HOME/.dots.git
+git init --bare $HOME/.dots.git --initial-branch=master
 dots remote add origin git@github.com:andrewimeson/dotfiles.git
 # If GPG is setup, verify commit signatures
-dots pull origin --verify-signatures
+dots pull origin master --verify-signatures
 dots submodule update --init --recursive
 dots crypt unlock
 ```
