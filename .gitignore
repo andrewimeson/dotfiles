@@ -4,6 +4,7 @@
 # system for any repo (and that would _exist_ potentially in any repo). If so,
 # add it to the .gitignore_global file instead, which any system using this
 # dotfiles repo would automatically be layering on top anyway.
+.dots.git/
 
 # Name files like secrets.do-not-track.zsh to exclude
 *do-not-track*
