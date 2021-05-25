@@ -193,6 +193,13 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
+function! StripWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+command! StripWhitespace call StripWhitespace()
+
 " rg is faster than grep for our fast fuzzy file searching with CtrlP
 if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
