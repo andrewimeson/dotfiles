@@ -51,9 +51,10 @@ let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:python_pylint_auto_pipenv = 1
 let g:ale_python_pylint_executable = 'python3'
 let g:ale_fixers = {
-\   'sh': ['shfmt', 'trim_whitespace'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'sh': 'shfmt',
 \   'yaml': 'yamlfix',
-\   'php': ['php_cs_fixer', 'trim_whitespace'],
+\   'php': 'php_cs_fixer'
 \}
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 set number relativenumber
