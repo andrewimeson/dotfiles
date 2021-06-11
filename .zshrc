@@ -9,6 +9,9 @@ fi
 
 # /usr/local/sbin needed for arping and mtr
 export PATH="$PATH:/usr/local/sbin"
+export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+# SonarQube sonar-scanner, manually installed via coping into directory
+export PATH="/opt/sonar-scanner/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
