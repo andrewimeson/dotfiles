@@ -14,7 +14,7 @@ kk() {
 alias vcat='vimcat'
 #export PAGER=vimpager
 export PAGER='less'
-alias recompile-ycmd="bash -c 'cd ~/.vim/bundle/YouCompleteMe && ./install.py --all && echo bacon'"
+alias recompile-ycmd="bash -c 'cd ~/.vim/bundle/YouCompleteMe && ./install.py --all  --system-libclang'"
 
 # IMPROVE: rewrite this as one or more functions
 # would be cool to be able to go
