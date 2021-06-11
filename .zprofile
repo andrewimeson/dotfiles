@@ -9,13 +9,14 @@
 # completion directory to somewhere where an untrustworthy user can write.
 ZSH_DISABLE_COMPFIX=true
 
-the_brew() {
+if [[ $OSTYPE =~ "darwin" ]]; then
+  the_brew() {
     if [[ -x /opt/homebrew/bin/brew ]]; then
-        echo /opt/homebrew/bin/brew
-    elif [[ -x /usr/local/bin/brew  ]]; then
-        echo /usr/local/bin/brew
+      echo /opt/homebrew/bin/brew
+    elif [[ -x /usr/local/bin/brew ]]; then
+      echo /usr/local/bin/brew
     fi
-}
-FPATH=$($(the_brew) --prefix)/share/zsh/site-functions:$FPATH
-
-unset -f the_brew
+  }
+  FPATH=$($(the_brew) --prefix)/share/zsh/site-functions:$FPATH
+  unset -f the_brew
+fi
