@@ -108,15 +108,6 @@ let g:shfmt_extra_args = '-i 2 -ci -s'
 Plugin 'aliou/bats.vim'
 " Auto-formatting for things like SQL (with sqlformat)
 Plugin 'Chiel92/vim-autoformat'
-" Automatically uppercase SQL keywords!!! :D
-" EDIT: Disabling... it uppercases the wrong things sometimes
-" Plugin 'alcesleo/vim-uppercase-sql'
-
-" SQL command completion that works alongside dbext for database-specific
-" completion
-Plugin 'vim-scripts/SQLComplete.vim'
-let g:sql_type_default = 'mysql'
-
 " Markdown stuff, needs tabular first
 " Tabular is awesome for more than just markdown
 " Run `:Tabularize /=` to align all the things by an equal sign
