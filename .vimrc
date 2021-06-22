@@ -15,8 +15,6 @@ Plugin 'L9'
 " Tab intercepto, which will hopefully get ultisnips and youcompleteme to work
 " happily together
 Plugin 'ervandew/supertab'
-" Vimwiki for note taking
-Plugin 'vimwiki/vimwiki'
 " Start page enhancement
 Plugin 'mhinz/vim-startify'
 " File navigation tool
@@ -24,8 +22,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " File tree plugin (don't tell the Vim purists)
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Automatic surrounding tags
-"Plugin 'tpope/vim-surround'
 " Automatic "end" "fi" etc upon CR
 Plugin 'tpope/vim-endwise'
 " Automatic closing of XML / HTML tags
@@ -36,10 +32,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 " vimrc key mappings and stuff
 Plugin 'tpope/vim-unimpaired'
-" Switch between single and multiline statements in languages
-" use 'gS' to split a one-liner into multiple lines
-" use 'gJ' to do the reverse
-Plugin 'AndrewRadev/splitjoin.vim'
 " Async linter - This is my favorite plugin in teh whole world
 Plugin 'dense-analysis/ale'
 " Enable completion where available.
@@ -58,15 +50,8 @@ let g:ale_fixers = {
 \}
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 set number relativenumber
-" Golang thing
-" I think YCM probably handles better
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'fatih/vim-go'
 " Hugo static site generator helper plugin
 Plugin 'robertbasic/vim-hugo-helper'
-" Syntax highlighting for PowerShell
-"Plugin 'PProvost/vim-ps1.git'
-"autocmd BufNewFile,BufRead *.ps1 setlocal filetype=ps1
 " LaTeX
 Plugin 'lervag/vimtex'
 let g:tex_flavor = 'latex'
@@ -88,8 +73,6 @@ Plugin 'leafgarland/typescript-vim'
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 " Detect wscript (zarf/waf) files correctly
 autocmd BufNewFile,BufRead wscript setlocal filetype=python
-" HAProxy syntax highlighting
-" Plugin 'vim-scripts/haproxy'
 " One syntax highlighting package to rule them all, faster. Replaces PowerShell,
 " Nginx, and HAProxy (among others)
 Plugin 'sheerun/vim-polyglot'
@@ -117,13 +100,9 @@ Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
 " Cisco IOS syntax highlighting
 Plugin 'momota/cisco.vim'
-"
-Plugin 'hashivim/vim-terraform'
-let g:terraform_align=1
-" au BufRead,BufNewFile *.tf set filetype=terraform
 " Ansible + Jinja2
 Plugin 'pearofducks/ansible-vim'
-" Solarized https://github.com/altercation/vim-colors-solarized
+" Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 " Automatic snippets (works with YouCompleteMe)
 Plugin 'SirVer/ultisnips'
@@ -142,18 +121,11 @@ Plugin 'chrisbra/csv.vim'
 " Vader - Vim testing framework. I needed this for syntax highlighting the
 " .vader files
 Plugin 'junegunn/vader.vim'
-" Shows indent characters
-" NOTE: Disabling because the conceal feature turns on for markdown code blocks,
-" JSON, and who knows what else
-"Plugin 'Yggdroot/indentLine'
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-"let g:indentLine_setConceal = 0
-"let g:indentLine_enabled = 0
 " NerdFonts for Vim
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()
 filetype plugin indent on    " required
 syntax on
 " Vundle Help:
@@ -165,7 +137,6 @@ syntax on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" from https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
 " Automatically change to light style background for Solarized-Light iTerm
 " profile, assume others are dark
 if $ITERM_PROFILE ==? 'Solarized-Light'
@@ -175,7 +146,8 @@ else
 endif
 colorscheme solarized
 
-" Diff before saving https://stackoverflow.com/questions/749297/can-i-see-changes-before-i-save-my-file-in-vim
+" Diff before saving
+" https://stackoverflow.com/questions/749297/can-i-see-changes-before-i-save-my-file-in-vim
 function! s:DiffWithSaved()
   let filetype=&filetype
   diffthis
@@ -271,4 +243,3 @@ let g:startify_lists = [
 " Vim Tricks:
 " Deleting blank lines:
 "   g/^\s*$/d
-
