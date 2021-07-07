@@ -11,6 +11,7 @@ brew_packages:
   - lldpd
   - mtr
   - curl
+  - httpie
   - telnet
 
   # Shell
