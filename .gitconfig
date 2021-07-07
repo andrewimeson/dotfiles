@@ -1,16 +1,22 @@
 [core]
+    # Global gitignore file to layer on top of repo-specific gitignore files.
     excludesfile = ~/.gitignore_global
 [user]
     name       = Andrew Imeson
     email      = andrew@andrewimeson.com
+    # Sign commits with this GPG key
     signingkey = 9FC9E016
 [gpg]
     program = gpg
+# If a repository is stored in this directory, load in my work-specific
+# configuration overrides (e.g., set email to work email)
 [includeIf "gitdir:~/Documents/Code/work/"]
     path = ~/.gitconfig-work
 [commit]
+    # Override the git commit example comments to my own template
     template = ~/.gitmessage
     gpgsign  = true
+    # Show a diff of the commit in the editor when running 'git commit'
     verbose  = true
 [merge]
     tool = vimdiff
@@ -28,14 +34,23 @@
 [ghi]
     token = !security find-internet-password -a andrewimeson -s github.com -l 'ghi token' -w
 [push]
+    # Don't make me set the upstream tracking branch on first push, assume
+    # current branch
     default = current
 [rebase]
+    # Automatically change "fixup!" commits to be squashed
     autosquash = true
 [url "git@github.com:"]
+    # Alias to reduce typing:
+    # 'git@github.com:organization/repo.git' becomes just
+    # 'gh:organization/repo.git'
     insteadOf = gh:
 [log]
+    # Show the abreviated hash instead of the full
     abbrevcommit = yes
 [apply]
+    # Automatically fix whitespace issues (like trailing spaces) when
+    # interactively staging commits with 'git add -p/--patch'
     whitespace = fix
 [help]
     # Automatically apply typo fix of git command in X deciseconds (0.1 sec)
