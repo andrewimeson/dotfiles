@@ -57,3 +57,6 @@
     autocorrect = 30
 [init]
     defaultBranch = master
+[pager]
+    # Don't page on 'git grep'
+    grep = false
