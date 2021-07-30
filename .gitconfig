@@ -63,3 +63,6 @@
 [pull]
     # Rebase your changed on top of remote changes
     rebase = true
+[fetch]
+    # Prune remote tracking info that no longer exists on the remote
+    prune = true
