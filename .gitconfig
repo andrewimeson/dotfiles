@@ -66,3 +66,5 @@
 [fetch]
     # Prune remote tracking info that no longer exists on the remote
     prune = true
+[submodule]
+    fetchJobs = 8
