@@ -54,6 +54,9 @@ if [[ $OSTYPE =~ "darwin" ]]; then
     # x86_64 Homebrew
     eval "$(/usr/local/bin/brew shellenv)"
   fi
+  # "sudoedit" isn't present on macOS, but the oh-my-zsh 'sudo' plugins tries to
+  # be clever by substituting "$EDITOR/vim $file" with "sudoedit,"
+  command -v sudoedit || alias sudoedit='sudo --edit'
 fi
 # cansible - c[at]ansible. An easy way to view all the files in an Ansible role
 # Created with @cstobey
