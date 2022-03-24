@@ -62,7 +62,15 @@ fi
 # Created with @cstobey
 alias cansible="find . -type f -name '*.yml' | grep -v ^./templates/ | sort | xargs tail -n +1"
 # Requires the "git root" alias from my .gitconfig
-alias groot='cd $(git root)'
+groot() {
+  if groot_root="$(git root)"; then
+    # shellcheck disable=SC2164
+    cd "$groot_root"
+  else
+    return 1
+  fi
+}
+
 # Markdown rendering
 alias grip="grip --browser"
 
