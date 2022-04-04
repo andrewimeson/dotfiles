@@ -26,8 +26,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-endwise'
 " Automatic closing of XML / HTML tags
 Plugin 'alvan/vim-closetag'
-" Automatic closing of other types of constructs like parans
-Plugin 'jiangmiao/auto-pairs'
 " Comment Lines: gcc
 Plugin 'tpope/vim-commentary'
 " vimrc key mappings and stuff
