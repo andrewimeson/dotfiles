@@ -1,32 +1,6 @@
 
-# feat(telegraf): Add UDP listener
-
+#         For commit subject:
 # |<----  Using a Maximum Of 50 Characters  ---->|
-# <type>(area_name): (If applied, this commit will...) <subject> 
-# Explain why this change is being made:
-
-# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
 #
-# Type can be (common):
-#    feat     =  new feature
-#    fix      =  bug fix
-#    refactor =  code change that neither fixes a bug nor adds a feature
-#    chore    =  Changes to the build process or auxiliary tools and libraries 
-#                (documentation generation, version file, etc)
-#
-# (uncommon)
-#    test     =  adding missing or correcting existing tests
-#    docs     =  documentation-only changes (treat public-facing documentation 
-#                as functional code; use feat(), fix(), etc)
-#    style    =  changes that do not affect the meaning of the code (whitespace,
-#                formatting, etc)
-#    perf     =  change that improves performance
-#    revert   =  change that is the exact opposite of the mentioned commit ID
-# --------------------
-# Remember to:
-#    Capitalize the subject line
-#    Use the imperative mood in the subject line
-#    Do not end the subject line with a period
-#    Separate subject from body with a blank line
-#    Use the body to explain what and why vs. how
-#    Can use multiple lines with "-" for bullet points in body
+#         For commit body:
+# |<----  Try To Limit Each Line to a Maximum Of 72 Characters    ---->|
