@@ -6,6 +6,8 @@ set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" Remember the last editing place in a file
+Plugin 'farmergreg/vim-lastplace'
 " Git plugin
 Plugin 'tpope/vim-fugitive'
 " GitHub plugin for vim-fugitive simple ":Gbrowse" a file on git
