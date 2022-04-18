@@ -91,11 +91,7 @@ let g:shfmt_extra_args = '-i 2 -ci -s'
 Plugin 'aliou/bats.vim'
 " Auto-formatting for things like SQL (with sqlformat)
 Plugin 'Chiel92/vim-autoformat'
-" Markdown stuff, needs tabular first
-" Tabular is awesome for more than just markdown
-" Run `:Tabularize /=` to align all the things by an equal sign
-" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
-Plugin 'godlygeek/tabular'
+" Markdown stuff
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
 " Cisco IOS syntax highlighting
