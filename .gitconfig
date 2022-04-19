@@ -52,6 +52,10 @@
     # Automatically fix whitespace issues (like trailing spaces) when
     # interactively staging commits with 'git add -p/--patch'
     whitespace = fix
+[interactive]
+    # make interactive prompts like 'git add -p/--path' respond to a  single
+    # keypress
+    singlekey = true
 [help]
     # Automatically apply typo fix of git command in X deciseconds (0.1 sec)
     autocorrect = 30
