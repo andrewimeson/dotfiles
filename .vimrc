@@ -32,6 +32,8 @@ Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-commentary'
 " vimrc key mappings and stuff
 Plugin 'tpope/vim-unimpaired'
+" Surround a word with quotes and things
+Plugin 'tpope/vim-surround'
 " Async linter - This is my favorite plugin in teh whole world
 Plugin 'dense-analysis/ale'
 " Enable completion where available.
