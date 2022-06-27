@@ -46,6 +46,7 @@ plugins=(
   extract
   git
   pip
+  poetry
   sudo
   terraform
   vagrant
