@@ -47,6 +47,7 @@ plugins=(
   git
   pip
   poetry
+  pyenv
   sudo
   terraform
   vagrant
