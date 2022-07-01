@@ -12,6 +12,12 @@ Plugin 'farmergreg/vim-lastplace'
 Plugin 'tpope/vim-fugitive'
 " GitHub plugin for vim-fugitive simple ":Gbrowse" a file on git
 Plugin 'tpope/vim-rhubarb.git'
+" Displays inline git blame like the cool Gitlens users on VS Code
+Plugin 'APZelos/blamer.nvim'
+let g:blamer_enabled = 1
+let g:blamer_relative_time = 1
+let g:blamer_template = '<committer>, <committer-time> • <summary>'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Tab intercepto, which will hopefully get ultisnips and youcompleteme to work
