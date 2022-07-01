@@ -93,7 +93,7 @@ let g:airline#extensions#ale#enabled = 1
 Plugin 'editorconfig/editorconfig-vim'
 " shfmt auto-formatter. Call with ':Shfmt' to auto-format shell scripts
 Plugin 'z0mbix/vim-shfmt'
-let g:shfmt_extra_args = '--indent 2 --case-indent --simplify'
+let g:shfmt_extra_args = '--indent 4 --case-indent --simplify --space-redirects'
 " BATS shell testing syntax highlighting
 " TODO: Submit to polyglot and remove
 Plugin 'aliou/bats.vim'
