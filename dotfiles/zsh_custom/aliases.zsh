@@ -14,7 +14,16 @@ kk() {
 alias vcat='vimcat'
 #export PAGER=vimpager
 export PAGER='less'
-alias recompile-ycmd="sh -c 'cd ~/.vim/bundle/YouCompleteMe && ./install.py --all  --system-libclang'"
+
+recompile-ycmd() {
+    local opts=(
+        --go-completer
+        --ts-completer
+    )
+    # Subshell to avoid changing directory in parent shell
+    (cd ~/.vim/bundle/YouCompleteMe &&
+        ./install.py "${opts[@]}")
+}
 
 # IMPROVE: rewrite this as one or more functions
 # would be cool to be able to go
