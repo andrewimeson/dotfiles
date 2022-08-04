@@ -39,7 +39,8 @@
     # current branch
     default = current
 [rebase]
-    # Automatically change "fixup!" commits to be squashed
+    # Automatically change "fixup!" commits to be squashed when doing an
+    # interactive rebase
     autosquash = true
     # Automatically create a temporary stash and then pop it
     autostash = true
