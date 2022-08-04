@@ -14,3 +14,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
     # lazy to figure out why right now. So this.
     unset LSCOLORS
 fi
+# options for less
+# -R = ANSI colors preserved
+# -i = Smart case-insensitive search
+export LESS='-Ri'
