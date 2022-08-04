@@ -51,6 +51,7 @@ let g:ale_python_pylint_executable = 'python3'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'sh': 'shfmt',
+\   'sql': 'pgformatter',
 \   'yaml': 'yamlfix',
 \   'php': 'php_cs_fixer'
 \}
