@@ -41,6 +41,8 @@
 [rebase]
     # Automatically change "fixup!" commits to be squashed
     autosquash = true
+    # Automatically create a temporary stash and then pop it
+    autostash = true
 [url "git@github.com:"]
     # Alias to reduce typing:
     # 'git@github.com:organization/repo.git' becomes just
