@@ -42,8 +42,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 " Async linter - This is my favorite plugin in teh whole world
 Plugin 'dense-analysis/ale'
-" Enable completion where available.
-let g:ale_completion_enabled = 1
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%] [%code%]'
 let g:ale_sign_warning = '⚠️'
 let g:ale_sign_error = '❌'
