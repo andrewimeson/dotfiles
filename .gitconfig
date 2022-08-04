@@ -1,5 +1,8 @@
+# my ~/.gitconfig, annotated with teaching comments
 [core]
     # Global gitignore file to layer on top of repo-specific gitignore files.
+    # Put things like text editor-specific or operating system-specific junk
+    # files here. Those don't belong in an individual repo .gitignore
     excludesfile = ~/.gitignore_global
 [user]
     name       = Andrew Imeson
@@ -16,12 +19,19 @@
     # Override the git commit example comments to my own template
     template = ~/.gitmessage
     gpgsign  = true
-    # Show a diff of the commit in the editor when running 'git commit'
+    # Show a diff of the commit in the editor when running 'git commit'.
+    # Really helpful for deciding what to write as the commit message, and makes
+    # editor autocomplete pick up on keywords from the diff
     verbose  = true
 [merge]
+    # Run 'git mergetool" when you have conflicts to resolve and resolve them
+    # using vimdiff which provides a really nice four-pane view
     tool = vimdiff
 [alias]
     graph = log --graph --oneline --decorate
+    # Get the full path to the root of the repo. Useful with my groot alias in
+    # ./dotfiles/zsh_custom/aliases.zsh to be able to easily cd to the root of
+    # a repository
     root  = !pwd
     rbi   = rebase --interactive
     pf    = push --force-with-lease
@@ -33,13 +43,18 @@
     token = !security find-internet-password -a andrewimeson -s github.com -l 'ghi token' -w
 [push]
     # Don't make me set the upstream tracking branch on first push, assume
-    # current branch
+    # current branch. Only pushes the current branch, not all branches.
     default = current
 [rebase]
     # Automatically change "fixup!" commits to be squashed when doing an
-    # interactive rebase
+    # interactive rebase. Combine this with:
+    #    git commit --fixup=3cd84d9
+    # or
+    #    git commit --fixup=":/matching string"
+    # to amend past commits. Note that it will change the hash, so you shouldn't
+    # use this for commits that are already in a shared branch.
     autosquash = true
-    # Automatically create a temporary stash and then pop it
+    # Automatically create a temporary stash and then pop it when rebasing
     autostash = true
 [url "git@github.com:"]
     # Alias to reduce typing:
@@ -47,7 +62,7 @@
     # 'gh:organization/repo.git'
     insteadOf = gh:
 [log]
-    # Show the abreviated hash instead of the full
+    # Show the abbreviated hash instead of the full when running 'git log'
     abbrevcommit = yes
 [apply]
     # Automatically fix whitespace issues (like trailing spaces) when
@@ -55,21 +70,25 @@
     whitespace = fix
 [interactive]
     # make interactive prompts like 'git add -p/--path' respond to a  single
-    # keypress
+    # keypress rather than having to press 'return'
     singlekey = true
 [help]
     # Automatically apply typo fix of git command in X deciseconds (0.1 sec)
+    # E.g. you accidentally run 'git lgo' and it corrects it to 'git log' unless
+    # you CTRL + C
     autocorrect = 30
 [init]
     defaultBranch = master
 [pager]
-    # Don't page on 'git grep'
+    # Don't pager on 'git grep'
     grep = false
 [pull]
-    # Rebase your changed on top of remote changes
+    # Rebase (instead of merging) your branch on top of the remote branch when
+    # you pull
     rebase = true
 [fetch]
     # Prune remote tracking info that no longer exists on the remote
     prune = true
 [submodule]
+    # Parallelize submodule cloning
     fetchJobs = 8
