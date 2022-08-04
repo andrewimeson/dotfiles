@@ -6,5 +6,5 @@
 
 EXPECTED_LOCATION=/Volumes/BashBunny
 if [[ -d $EXPECTED_LOCATION ]]; then
-  export BUNNYPATH=$EXPECTED_LOCATION
+    export BUNNYPATH=$EXPECTED_LOCATION
 fi
