@@ -27,9 +27,6 @@
     pf    = push --force-with-lease
     st    = status
     sed = !sh -c 'git grep --null --full-name --name-only --perl-regexp -e \"$1\" | xargs -0 perl -i -p -e \"s/$1/$2/g\"' -
-# IMPROVE: Fix repocache to work again
-#[repocache]
-#    path = ~/Library/Caches/org.git.repocache/repocache.git
 [github]
     user = andrewimeson
 [ghi]
