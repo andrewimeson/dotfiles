@@ -9,7 +9,7 @@ fi
 
 # /usr/local/sbin needed for arping and mtr
 export PATH="$PATH:/usr/local/sbin"
-export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 # Poetry for Python dependency management
 export PATH="$HOME/.poetry/bin:$PATH"
 
