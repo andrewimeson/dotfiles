@@ -39,8 +39,6 @@
     sed = !sh -c 'git grep --null --full-name --name-only --perl-regexp -e \"$1\" | xargs -0 perl -i -p -e \"s/$1/$2/g\"' -
 [github]
     user = andrewimeson
-[ghi]
-    token = !security find-internet-password -a andrewimeson -s github.com -l 'ghi token' -w
 [push]
     # Don't make me set the upstream tracking branch on first push, assume
     # current branch. Only pushes the current branch, not all branches.
