@@ -208,10 +208,12 @@ set formatoptions+=t
 " Show a line across all lines at the current column of the cursor. Useful for
 " Python especially
 set cursorcolumn
-" Spellecheck in Markdown files
+" Spellcheck - add a word to the dictionary with 'zg'
+set spell spelllang=en_us
 au BufRead *.md setlocal spell
 au BufRead *.markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+highlight SpellBad ctermfg=DarkRed cterm=underline
 " ================ Search ===========================
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
